@@ -2,7 +2,7 @@ import "react-rtg/build/index.css";
 import React, {useMemo} from 'react';
 import GuideTourVertical from "./Tour/GuideTourVertical";
 import GuideTourHorizontal from "./Tour/GuideTourHorizontal";
-import {BrowserRouter as Router, Route, Switch} from "react-router-dom"
+import {HashRouter as Router, Route, Switch} from "react-router-dom"
 import "./style/main.scss";
 import {TourRoot} from "react-rtg";
 
