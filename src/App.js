@@ -1,26 +1,49 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import "react-rtg/build/index.css";
+import React, {useMemo} from 'react';
+import GuideTourVertical from "./Tour/GuideTourVertical";
+import GuideTourHorizontal from "./Tour/GuideTourHorizontal";
+import {BrowserRouter as Router, Route, Switch} from "react-router-dom"
+import "./style/main.scss";
+import {TourRoot} from "react-rtg";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+import PageVertical from "./Pages/Vertical/Vertical";
+import PageHorizontal from "./Pages/Horizonal/Horizontal";
+
+const App = () => {
+
+    const vertical = useMemo(()=>{
+        const bus = {}
+        return (
+            <>
+                <GuideTourVertical bus={bus}/>
+                <PageVertical bus={bus}/>
+            </>
+        )
+    }, [])
+
+    const horizontal = useMemo(()=>{
+        return (
+            <>
+                <TourRoot>
+                    <GuideTourHorizontal />
+                    <PageHorizontal  />
+                </TourRoot>
+            </>
+        )
+    }, [])
+
+    return (
+        <div>
+            <Router>
+                <Switch>
+                    <Route path={"/horizontal"} exact component={() => horizontal}/>
+                    <Route path="/" component={() => vertical}/>
+                </Switch>
+            </Router>
+
+        </div>
+    );
 }
 
 export default App;
