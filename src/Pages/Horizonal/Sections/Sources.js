@@ -16,7 +16,7 @@ const Sources = () => {
                     <div className={"l-col-xs-12 l-col-md-6"}>
                         <div id={"sources"}>
                             <button className={"button button--dark"}><a href={"https://github.com/robert8888/react-tour-guide"}> Git hub </a></button>
-                            <button className={"button button--secondary"}><a href={"/https://www.npmjs.com/package/react-rtg"}> Npm </a></button>
+                            <button className={"button button--secondary"}><a href={"https://www.npmjs.com/package/react-rtg"}> Npm </a></button>
                         </div>
                     </div>
                 </div>
