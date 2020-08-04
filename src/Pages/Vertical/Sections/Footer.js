@@ -24,8 +24,8 @@ const Footer = () => {
                                 <pre>yard add react-rtg</pre>
                         </span>
 
-                        <button className={"button--white"} id={"buttonGithub"}><a href={"www.google.com"}>Github</a></button>
-                        <button className={"button--white"}>Npm</button>
+                        <button className={"button--white"} id={"buttonGithub"}><a href={"https://github.com/robert8888/react-tour-guide"}>Github</a></button>
+                        <button className={"button--white"}><a href={"https://www.npmjs.com/package/react-rtg"}>Npm</a></button>
                     </div>
                 </div>
                 <div className={"l-row l-row--bottom"} data-rtg={"footer"}>
