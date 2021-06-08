@@ -1,11 +1,13 @@
 import React, {useEffect} from "react";
 import {useTour} from "react-rtg";
 
+const mode = process.env.NODE_ENV;
 
 const Intro = () => {
     let [tour] = useTour("TourVertical");
 
     useEffect(()=>{
+        if(mode !== "development") return ;
         tour.on("close", () => console.log("onClose"));
         tour.on("beforeClose", () => console.log("onBeforeClose"));
         tour.on("afterClose", () => console.log("onAfterClose"));
@@ -13,7 +15,6 @@ const Intro = () => {
         tour.on("beforeOpen", () => console.log("onBeforeOpen"));
         tour.on("open", () => console.log("open"));
         tour.on("afterOpen", () => {console.log("onAfterOpen", tour.step.index, tour.isOpen)});
-
         tour.on("next", (...args) => {
             console.log("next", args);
             console.log("tour length", tour.length)
@@ -28,7 +29,7 @@ const Intro = () => {
             <div className={"l-container"}>
                 <div className={"l-row-g-xs-20  l-row-g-md-200"}>
                     <div className={"l-col-xs-12 l-col-md-6"}>
-                        <img className={"horizontal__intro__logo"} src="/rtg-logo-white.png" alt={"logo rtg"}/>
+                        <img className={"horizontal__intro__logo"} src="/rtg-demo/rtg-logo-white.png" alt={"logo rtg"}/>
                     </div>
                     <div className={"l-col-xs-12 l-col-md-6"}>
                         <div>

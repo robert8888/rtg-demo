@@ -14,7 +14,7 @@ const Intro = ({bus}) => {
                         onClick={() => bus.start()}>
                     Make a tour
                 </button>
-                <button className={"intro__button button--light"}>Check on github</button>
+                <button className={"intro__button button--light"}><a href={"https://github.com/robert8888/react-tour-guide"}>Check on github</a></button>
             </div>
         </section>
     )
