@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://robert8888.github.io/rtg-demo",
   "dependencies": {
+    "npm-force-resolutions": "0.0.10",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-router-dom": "^5.2.0",
@@ -38,6 +39,10 @@
     "@testing-library/user-event": "^7.1.2",
     "gh-pages": "^3.2.0",
     "node-sass": "^6.0.0",
+    "postcss-custom-properties": "^10.0.0",
     "react-scripts": "^4.0.3"
+  },
+  "resolutions": {
+    "react-scripts/postcss-preset-env/postcss-custom-properties": "^10.0.0"
   }
 }
